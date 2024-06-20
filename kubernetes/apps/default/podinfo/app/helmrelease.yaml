@@ -23,6 +23,7 @@ spec:
   values:
     ingress:
       className: tailscale
+      enabled: true
       tls:
         - hosts:
             - podinfo
