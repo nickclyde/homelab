@@ -9,7 +9,7 @@ spec:
   commonMetadata:
     labels:
       app.kubernetes.io/name: *app
-  path: ./kubernetes/apps/test/podinfo/app
+  path: ./kubernetes/apps/default/podinfo/app
   prune: true
   sourceRef:
     kind: GitRepository
