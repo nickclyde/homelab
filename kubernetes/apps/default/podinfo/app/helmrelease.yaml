@@ -24,6 +24,11 @@ spec:
     ingress:
       className: tailscale
       enabled: true
+      hosts:
+        - host: podinfo
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
       tls:
         - hosts:
             - podinfo
