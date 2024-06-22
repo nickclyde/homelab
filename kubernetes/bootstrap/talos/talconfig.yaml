@@ -27,7 +27,7 @@ nodes:
     installDisk: "/dev/sdb"
     machineSpec:
       secureboot: true
-    talosImageURL: factory.talos.dev/installer-secureboot/2d61dd07b20062062ea671b4d01873506103b67c0f7a4c3fb6cf4ee85585dcb8
+    talosImageURL: factory.talos.dev/installer-secureboot/22a73b21ea2e27057f17a22b56fdf89e09868979c10d22f10a9b7e9c1e988a60
     controlPlane: true
     networkInterfaces:
       - deviceSelector:
@@ -46,7 +46,7 @@ nodes:
     installDisk: "/dev/sdb"
     machineSpec:
       secureboot: true
-    talosImageURL: factory.talos.dev/installer-secureboot/2d61dd07b20062062ea671b4d01873506103b67c0f7a4c3fb6cf4ee85585dcb8
+    talosImageURL: factory.talos.dev/installer-secureboot/22a73b21ea2e27057f17a22b56fdf89e09868979c10d22f10a9b7e9c1e988a60
     controlPlane: true
     networkInterfaces:
       - deviceSelector:
@@ -65,7 +65,7 @@ nodes:
     installDisk: "/dev/sdb"
     machineSpec:
       secureboot: true
-    talosImageURL: factory.talos.dev/installer-secureboot/2d61dd07b20062062ea671b4d01873506103b67c0f7a4c3fb6cf4ee85585dcb8
+    talosImageURL: factory.talos.dev/installer-secureboot/22a73b21ea2e27057f17a22b56fdf89e09868979c10d22f10a9b7e9c1e988a60
     controlPlane: true
     networkInterfaces:
       - deviceSelector:
@@ -84,7 +84,7 @@ nodes:
     installDisk: "/dev/sdb"
     machineSpec:
       secureboot: true
-    talosImageURL: factory.talos.dev/installer-secureboot/2d61dd07b20062062ea671b4d01873506103b67c0f7a4c3fb6cf4ee85585dcb8
+    talosImageURL: factory.talos.dev/installer-secureboot/22a73b21ea2e27057f17a22b56fdf89e09868979c10d22f10a9b7e9c1e988a60
     controlPlane: false
     networkInterfaces:
       - deviceSelector:
@@ -101,7 +101,7 @@ nodes:
     installDisk: "/dev/sdb"
     machineSpec:
       secureboot: true
-    talosImageURL: factory.talos.dev/installer-secureboot/2d61dd07b20062062ea671b4d01873506103b67c0f7a4c3fb6cf4ee85585dcb8
+    talosImageURL: factory.talos.dev/installer-secureboot/22a73b21ea2e27057f17a22b56fdf89e09868979c10d22f10a9b7e9c1e988a60
     controlPlane: false
     networkInterfaces:
       - deviceSelector:
@@ -145,4 +145,3 @@ controlPlane:
     - "@./patches/controller/cluster.yaml"
     - "@./patches/controller/disable-admission-controller.yaml"
     - "@./patches/controller/etcd.yaml"
-
