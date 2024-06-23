@@ -140,6 +140,16 @@ spec:
     csiDriver:
       # should be globally unique for a given cluster
       name: "org.democratic-csi.iscsi"
+    node:
+      hostPID: true
+      driver:
+        extraEnv:
+          - name: ISCSIADM_HOST_STRATEGY
+            value: nsenter
+          - name: ISCSIADM_HOST_PATH
+            value: /usr/local/sbin/iscsiadm
+        iscsiDirHostPath: /usr/local/etc/iscsi
+        iscsiDirHostPathType: ""
 
     # add note here about volume expansion requirements
     storageClasses:
@@ -164,16 +174,6 @@ spec:
       config:
         driver: freenas-iscsi
         instance_id:
-        node:
-          hostPID: true
-          driver:
-            extraEnv:
-              - name: ISCSIADM_HOST_STRATEGY
-                value: nsenter
-              - name: ISCSIADM_HOST_PATH
-                value: /usr/local/sbin/iscsiadm
-            iscsiDirHostPath: /usr/local/etc/iscsi
-            iscsiDirHostPathType: ""
         httpConnection:
           protocol: http
           host: 192.168.1.246
