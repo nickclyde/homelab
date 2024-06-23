@@ -67,9 +67,9 @@ spec:
           port: 22
           username: admin
           # use either password or key
-          # password: ""
-          privateKey: |
-            ${TRUENAS_SSH_KEY}
+          password: ${TRUENAS_PASSWORD}
+          # privateKey: |
+          #   ${TRUENAS_SSH_KEY}
         zfs:
           # can be used to override defaults if necessary
           # the example below is useful for TrueNAS 12
@@ -193,9 +193,9 @@ spec:
           port: 22
           username: admin
           # use either password or key
-          # password: ""
-          privateKey: |
-            ${TRUENAS_SSH_KEY}
+          password: ${TRUENAS_PASSWORD}
+          # privateKey: |
+          #   ${TRUENAS_SSH_KEY}
         zfs:
           # can be used to override defaults if necessary
           # the example below is useful for TrueNAS 12
