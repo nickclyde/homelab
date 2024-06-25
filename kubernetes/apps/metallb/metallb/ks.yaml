@@ -28,7 +28,7 @@ spec:
   targetNamespace: metallb-system
   commonMetadata:
     labels:
-      app.kubernetes.io/name: *app
+      app.kubernetes.io/name: metallb
   path: ./kubernetes/apps/metallb/metallb/config
   dependsOn:
     - name: metallb
