@@ -18,17 +18,3 @@ spec:
   interval: 30m
   retryInterval: 1m
   timeout: 5m
-  patches:
-    - patch: |-
-        apiVersion: v1
-        kind: Service
-        metadata:
-          name: unbound-dns
-          namespace: dns
-        spec:
-          loadBalancerClass: MetalLB
-          loadBalancerIP: 192.168.1.4
-      target:
-        kind: Service
-        name: unbound-dns
-        namespace: dns

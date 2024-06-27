@@ -28,3 +28,14 @@ spec:
       # -- Timezone for the container.
       - name: TZ
         value: America/Los_Angeles
+  postRenderers:
+    - kustomize:
+        patchesStrategicMerge:
+          - apiVersion: v1
+            kind: Service
+            metadata:
+              name: unbound-dns
+              namespace: dns
+            spec:
+              loadBalancerClass: MetalLB
+              loadBalancerIP: 192.168.1.4
