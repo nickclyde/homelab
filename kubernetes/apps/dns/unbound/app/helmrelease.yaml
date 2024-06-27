@@ -32,8 +32,12 @@ spec:
     - kustomize:
         patches:
           - target:
+              group: ""
+              version: v1
+              kind: Service
               name: unbound-dns
               namespace: dns
+              labelSelector: "app.kubernetes.io/name=unbound"
             patch: |-
               apiVersion: v1
               kind: Service
