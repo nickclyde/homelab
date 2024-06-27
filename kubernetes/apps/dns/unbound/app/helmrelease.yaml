@@ -21,7 +21,13 @@ spec:
     remediation:
       retries: 3
   values:
+    service:
+      dns:
+        type: LoadBalancer
     env:
       # -- Timezone for the container.
       - name: TZ
         value: America/Los_Angeles
+  postRenderers:
+    - name: kustomize
+      path: .
