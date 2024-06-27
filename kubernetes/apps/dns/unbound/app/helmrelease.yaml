@@ -32,17 +32,14 @@ spec:
     - kustomize:
         patches:
           - target:
-              group: ""
               version: v1
               kind: Service
               name: unbound-dns
               namespace: dns
-              labelSelector: "app.kubernetes.io/name=unbound"
-            patch: |-
-              apiVersion: v1
-              kind: Service
-              metadata:
-                name: unbound-dns
-              spec:
-                loadBalancerClass: MetalLB
-                loadBalancerIP: 192.168.1.4
+            patch: |
+              - op: add
+                path: /spec/loadBalancerClass
+                value: MetalLB
+              - op: add
+                path: /spec/loadBalancerIP
+                value: 192.168.1.4
