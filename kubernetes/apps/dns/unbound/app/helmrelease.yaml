@@ -32,14 +32,12 @@ spec:
     - kustomize:
         patches:
           - target:
-              version: v1
               kind: Service
               name: unbound-dns
-              namespace: dns
             patch: |
-              - op: replace
+              - op: add
                 path: /spec/loadBalancerClass
                 value: MetalLB
-              - op: replace
+              - op: add
                 path: /spec/loadBalancerIP
                 value: 192.168.1.4
