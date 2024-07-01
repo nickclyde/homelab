@@ -25,3 +25,13 @@ spec:
       # -- Timezone for the container.
       - name: TZ
         value: America/Los_Angeles
+  postRenderers:
+    - kustomize:
+        patches:
+          - target:
+              kind: Service
+              name: unbound-dns
+            patch: |
+              - op: add
+                path: /spec/ClusterIP
+                value: ${UNBOUND_CLUSTER_IP}

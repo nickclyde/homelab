@@ -43,8 +43,11 @@ spec:
 
     adminPassword: ${PIHOLE_PASSWORD}
 
-    DNS1: unbound-dns
+    DNS1: ${UNBOUND_CLUSTER_IP}
     DNS2: null
+
+    extraEnvVars:
+      DNSMASQ_LISTENING: all
 
     adlists:
       - https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt
