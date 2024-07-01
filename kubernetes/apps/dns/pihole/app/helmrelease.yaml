@@ -32,6 +32,13 @@ spec:
     serviceDhcp:
       enabled: false
 
+    ingress:
+      enabled: true
+      ingressClassName: tailscale
+      tls:
+        - hosts:
+            - pihole
+
     adminPassword: ${PIHOLE_PASSWORD}
 
     DNS1: unbound-dns
