@@ -11,6 +11,7 @@ resources:
   - ./metrics-server.yaml
   - ./openebs.yaml
   - ./pascaliske.yaml
+  - ./pihole-kubernetes.yaml
   - ./podinfo.yaml
   - ./postfinance.yaml
   - ./prometheus-community.yaml
