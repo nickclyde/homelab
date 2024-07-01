@@ -21,25 +21,7 @@ spec:
     remediation:
       retries: 3
   values:
-    service:
-      dns:
-        type: LoadBalancer
-      annotations:
-        metallb.universe.tf/loadBalancerIPs: "192.168.1.4"
     env:
       # -- Timezone for the container.
       - name: TZ
         value: America/Los_Angeles
-  postRenderers:
-    - kustomize:
-        patches:
-          - target:
-              kind: Service
-              name: unbound-dns
-            patch: |
-              - op: add
-                path: /spec/loadBalancerClass
-                value: MetalLB
-              - op: add
-                path: /spec/loadBalancerIP
-                value: 192.168.1.4
