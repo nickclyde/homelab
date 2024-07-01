@@ -411,14 +411,7 @@ spec:
         patches:
           - target:
               kind: Service
-              name: pihole-dns-tcp
-            patch: |
-              - op: add
-                path: /spec/loadBalancerClass
-                value: tailscale
-          - target:
-              kind: Service
-              name: pihole-dns-udp
+              name: pihole-dns
             patch: |
               - op: add
                 path: /spec/loadBalancerClass
