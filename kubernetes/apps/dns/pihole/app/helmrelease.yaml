@@ -35,6 +35,8 @@ spec:
     ingress:
       enabled: true
       ingressClassName: tailscale
+      hosts:
+        - host: pihole
       tls:
         - hosts:
             - pihole
