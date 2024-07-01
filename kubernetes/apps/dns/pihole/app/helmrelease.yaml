@@ -29,6 +29,10 @@ spec:
       enabled: true
       storageClass: freenas-nfs-csi
 
+    serviceDns:
+      mixedService: true
+      type: LoadBalancer
+
     serviceDhcp:
       enabled: false
 
@@ -401,3 +405,21 @@ spec:
       - ^mads\.
       - ^pixels?[-.]
       - ^stat(s|istics)?[0-9]*[_.-]
+
+  postRenderers:
+    - kustomize:
+        patches:
+          - target:
+              kind: Service
+              name: pihole-dns-tcp
+            patch: |
+              - op: add
+                path: /spec/loadBalancerClass
+                value: tailscale
+          - target:
+              kind: Service
+              name: pihole-dns-udp
+            patch: |
+              - op: add
+                path: /spec/loadBalancerClass
+                value: tailscale
