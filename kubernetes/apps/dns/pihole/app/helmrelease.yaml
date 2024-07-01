@@ -43,7 +43,7 @@ spec:
 
     adminPassword: ${PIHOLE_PASSWORD}
 
-    DNS1: ${UNBOUND_CLUSTER_IP}
+    DNS1: ${UNBOUND_CLUSTER_IP}#5053
     DNS2: null
 
     extraEnvVars:
