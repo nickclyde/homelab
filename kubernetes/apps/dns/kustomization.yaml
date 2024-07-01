@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
   - ./namespace.yaml
   - ./unbound/ks.yaml
-  # - ./pihole/ks.yaml
+  - ./pihole/ks.yaml
