@@ -21,6 +21,9 @@ spec:
     remediation:
       retries: 3
   values:
+    image:
+      tag: 2024.06.0
+
     dnsmasq:
       customDnsEntries:
         - address=/truenas/192.168.1.246
