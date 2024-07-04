@@ -24,3 +24,5 @@ spec:
     oauth:
       clientId: ${TAILSCALE_OAUTH_CLIENT_ID}
       clientSecret: ${TAILSCALE_OAUTH_CLIENT_SECRET}
+    apiServerProxyConfig:
+      mode: true
