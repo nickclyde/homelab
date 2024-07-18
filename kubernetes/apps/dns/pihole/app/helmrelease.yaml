@@ -418,9 +418,9 @@ spec:
               kind: Service
               name: pihole-dns
             patch: |
-              - op: add
+              - op: replace
                 path: /spec/loadBalancerClass
                 value: MetalLB
-              - op: add
+              - op: replace
                 path: /metadata/annotations/metallb.universe.tf/loadBalancerIPs
                 value: 192.168.1.16
