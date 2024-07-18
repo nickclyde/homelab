@@ -420,4 +420,7 @@ spec:
             patch: |
               - op: add
                 path: /spec/loadBalancerClass
-                value: tailscale
+                value: MetalLB
+              - op: add
+                path: /metadata/annotations/metallb.universe.tf/loadBalancerIPs
+                value: 192.168.1.16
