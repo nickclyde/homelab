@@ -7,6 +7,7 @@ resources:
   - ./coredns.yaml
   - ./democratic-csi.yaml
   - ./jetstack.yaml
+  - ./metallb.yaml
   - ./metrics-server.yaml
   - ./openebs.yaml
   - ./pascaliske.yaml
