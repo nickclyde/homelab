@@ -37,6 +37,7 @@ spec:
     serviceDns:
       mixedService: true
       type: LoadBalancer
+      externalTrafficPolicy: Cluster
 
     serviceDhcp:
       enabled: false
