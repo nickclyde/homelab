@@ -422,5 +422,5 @@ spec:
                 path: /spec/loadBalancerClass
                 value: MetalLB
               - op: add
-                path: /metadata/annotations/metallb.universe.tf/loadBalancerIPs
+                path: /metadata/annotations/metallb.universe.tf~1loadBalancerIPs
                 value: 192.168.1.16
