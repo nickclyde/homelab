@@ -37,6 +37,8 @@ spec:
     serviceDns:
       mixedService: true
       type: LoadBalancer
+      annotations:
+        io.cilium/lb-ipam-ips: 192.168.1.16
 
     serviceDhcp:
       enabled: false
@@ -410,17 +412,3 @@ spec:
       - ^mads\.
       - ^pixels?[-.]
       - ^stat(s|istics)?[0-9]*[_.-]
-
-  postRenderers:
-    - kustomize:
-        patches:
-          - target:
-              kind: Service
-              name: pihole-dns
-            patch: |
-              - op: add
-                path: /spec/loadBalancerClass
-                value: MetalLB
-              - op: add
-                path: /metadata/annotations/metallb.universe.tf~1loadBalancerIPs
-                value: 192.168.1.16
