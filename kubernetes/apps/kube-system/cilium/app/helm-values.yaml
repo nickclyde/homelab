@@ -15,11 +15,16 @@ cni:
 # devices: eno+ eth+
 endpointRoutes:
   enabled: true
+externalIPs:
+  enabled: true
 hubble:
   enabled: false
 ipam:
   mode: kubernetes
 ipv4NativeRoutingCIDR: "10.1.0.0/16"
+k8sClientRateLimit:
+  qps: 50
+  burst: 100
 k8sServiceHost: 127.0.0.1
 k8sServicePort: 7445
 kubeProxyReplacement: true
