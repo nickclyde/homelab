@@ -31,8 +31,7 @@ spec:
         - address=/router2/192.168.1.2
 
     persistentVolumeClaim:
-      enabled: true
-      storageClass: freenas-nfs-csi
+      enabled: false
 
     serviceDns:
       mixedService: true
