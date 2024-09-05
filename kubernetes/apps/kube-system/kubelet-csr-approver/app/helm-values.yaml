@@ -1,3 +1,0 @@
----
-providerRegex: ^(controlplane01|controlplane02|controlplane03|worker01|worker02)$
-bypassDnsResolution: true
