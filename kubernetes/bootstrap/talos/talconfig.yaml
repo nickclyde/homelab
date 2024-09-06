@@ -23,7 +23,7 @@ cniConfig:
 
 nodes:
   - hostname: "controlplane01"
-    ipAddress: "192.168.1.148"
+    ipAddress: "192.168.1.150"
     installDisk: "/dev/sdb"
     machineSpec:
       secureboot: true
@@ -34,7 +34,7 @@ nodes:
           hardwareAddr: "10:e7:c6:05:c5:dd"
         dhcp: false
         addresses:
-          - "192.168.1.148/24"
+          - "192.168.1.150/24"
         routes:
           - network: 0.0.0.0/0
             gateway: "192.168.1.1"
@@ -42,7 +42,7 @@ nodes:
         vip:
           ip: "192.168.1.10"
   - hostname: "controlplane02"
-    ipAddress: "192.168.1.158"
+    ipAddress: "192.168.1.160"
     installDisk: "/dev/sdb"
     machineSpec:
       secureboot: true
@@ -53,7 +53,7 @@ nodes:
           hardwareAddr: "10:e7:c6:05:c6:b6"
         dhcp: false
         addresses:
-          - "192.168.1.158/24"
+          - "192.168.1.160/24"
         routes:
           - network: 0.0.0.0/0
             gateway: "192.168.1.1"
@@ -61,7 +61,7 @@ nodes:
         vip:
           ip: "192.168.1.10"
   - hostname: "controlplane03"
-    ipAddress: "192.168.1.119"
+    ipAddress: "192.168.1.121"
     installDisk: "/dev/sdb"
     machineSpec:
       secureboot: true
@@ -72,7 +72,7 @@ nodes:
           hardwareAddr: "10:e7:c6:05:c2:bd"
         dhcp: false
         addresses:
-          - "192.168.1.119/24"
+          - "192.168.1.121/24"
         routes:
           - network: 0.0.0.0/0
             gateway: "192.168.1.1"
@@ -80,7 +80,7 @@ nodes:
         vip:
           ip: "192.168.1.10"
   - hostname: "worker01"
-    ipAddress: "192.168.1.243"
+    ipAddress: "192.168.1.244"
     installDisk: "/dev/sdb"
     machineSpec:
       secureboot: true
@@ -91,13 +91,13 @@ nodes:
           hardwareAddr: "10:e7:c6:05:c4:d6"
         dhcp: false
         addresses:
-          - "192.168.1.243/24"
+          - "192.168.1.244/24"
         routes:
           - network: 0.0.0.0/0
             gateway: "192.168.1.1"
         mtu: 1500
   - hostname: "worker02"
-    ipAddress: "192.168.1.217"
+    ipAddress: "192.168.1.221"
     installDisk: "/dev/sdb"
     machineSpec:
       secureboot: true
@@ -108,7 +108,7 @@ nodes:
           hardwareAddr: "10:e7:c6:05:c3:ee"
         dhcp: false
         addresses:
-          - "192.168.1.217/24"
+          - "192.168.1.221/24"
         routes:
           - network: 0.0.0.0/0
             gateway: "192.168.1.1"
