@@ -11,6 +11,7 @@ resources:
   - ./postfinance.yaml
   - ./prometheus-community.yaml
   - ./spegel.yaml
+  - ./stackgres.yaml
   - ./stakater.yaml
   - ./external-dns.yaml
   - ./ingress-nginx.yaml
