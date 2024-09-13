@@ -5,5 +5,6 @@ metadata:
   name: truecharts
   namespace: flux-system
 spec:
+  type: oci
   interval: 1h
   url: oci://tccr.io/truecharts
