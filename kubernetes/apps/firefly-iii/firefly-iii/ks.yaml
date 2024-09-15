@@ -5,7 +5,7 @@ metadata:
   name: &app firefly-iii
   namespace: flux-system
 spec:
-  targetNamespace: stackgres
+  targetNamespace: firefly-iii
   commonMetadata:
     labels:
       app.kubernetes.io/name: *app
