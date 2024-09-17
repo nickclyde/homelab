@@ -24,3 +24,4 @@ spec:
     firefly-db:
       storage:
         accessModes: ReadWriteOnce
+        dataSize: 2Gi
