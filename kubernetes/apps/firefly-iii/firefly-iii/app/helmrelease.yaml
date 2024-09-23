@@ -29,8 +29,4 @@ spec:
       config:
         secrets:
           env:
-            appKey:
-              valueFrom:
-                secretKeyRef:
-                  name: firefly-secret
-                  key: APP_KEY
+            appKey: "${FIREFLY_APP_KEY}"
