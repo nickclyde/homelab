@@ -26,7 +26,5 @@ spec:
         accessModes: ReadWriteOnce
         dataSize: 2Gi
     firefly-iii:
-      config:
-        secrets:
-          env:
-            appKey: "${FIREFLY_APP_KEY}"
+      secrets:
+        appKey: "${FIREFLY_APP_KEY}"
