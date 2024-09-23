@@ -2,18 +2,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  annotations:
-    meta.helm.sh/release-name: homebridge
-    meta.helm.sh/release-namespace: homebridge
-  labels:
-    app.kubernetes.io/managed-by: Helm
-    app.kubernetes.io/name: homebridge
-    app.kubernetes.io/part-of: homebridge
-    helm.toolkit.fluxcd.io/name: homebridge
-    helm.toolkit.fluxcd.io/namespace: homebridge
-    k8s-app: homebridge
   name: homebridge
-  namespace: homebridge
 spec:
   ingressClassName: internal
   rules:
@@ -24,6 +13,6 @@ spec:
               service:
                 name: homebridge
                 port:
-                  name: http
+                  number: 8581
             path: /
             pathType: Prefix
