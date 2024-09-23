@@ -24,4 +24,5 @@ spec:
     image:
       tag: 2024-09-03
     persistence:
-      size: 2Gi
+      config:
+        size: 2Gi
